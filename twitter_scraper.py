@@ -13,5 +13,5 @@ for tweet in sntwitter.TwitterSearchScraper(query).get_items():
     else:
         tweets.append([tweet.date, tweet.username, tweet.content, tweet.likeCount, tweet.replyCount, tweet.retweetCount])
 
-df = pd.DataFrame(tweets, columns =['Date','User','Tweet','TweetLikea','TweetReplies','RetweetCount'])
+df = pd.DataFrame(tweets, columns =['Date','User','Tweet','TweetLikes','TweetReplies','RetweetCount'])
 df.to_csv('./Twitter/Arsenal_Scraper_test.csv')
